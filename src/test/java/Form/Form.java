@@ -13,6 +13,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class Form  extends BaseValue {
+    
+    String URL = "https://www.google.com/";
 
     @BeforeAll
     static void setup() {
@@ -22,7 +24,7 @@ public class Form  extends BaseValue {
     @Test
     void fillForm() {
         // open form
-        open("https://demoqa.com/automation-practice-form");
+        open(URL);
 
         $(".main-header").shouldHave(text("Practice Form"));
 
